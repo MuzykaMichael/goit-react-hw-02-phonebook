@@ -57,7 +57,7 @@ export class App extends Component {
               filtration={this.state.name}
               onChange={this.filterHandle}
               />
-              {filteredContacts.length>0?(
+              {filteredContacts.length > 0?(
                 <ListContacts
                 contacts={filteredContacts}
                 handleDelete={contactsDeleteHandler}
