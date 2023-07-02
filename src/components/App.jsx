@@ -60,7 +60,7 @@ export class App extends Component {
               {filteredContacts.length > 0?(
                 <ListContacts
                 contacts={filteredContacts}
-                handleDelete={contactsDeleteHandler}
+                handleDelete={this.contactsDeleteHandler}
                 />
             
           ):(
