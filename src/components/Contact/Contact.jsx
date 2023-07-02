@@ -18,8 +18,8 @@ render() {
             </p>
             <BtnDelete
             type="button"
-            onClick={()=>{
-                this.handleDelete(id);
+            onDeleteContact={()=>{
+                this.deleteContact(id);
             }}
             >Delete</BtnDelete>
         </ContactLi>

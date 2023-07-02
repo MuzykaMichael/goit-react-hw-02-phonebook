@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Form, Label, Input, BtnSubmit } from "./Form.styled";
+import { Forma, Label, Input, BtnSubmit } from "./Form.styled";
 import propTypes from 'prop-types'
 import {nanoid} from 'nanoid'
 
@@ -19,7 +19,7 @@ export class Form extends Component{
         const {name,number} = this.state;
         const contact = {name,number,id:nanoid()};
         this.props.onSubmit(contact);
-        this.props.clear();
+        this.clear();
     }
 
     clear = () => {
@@ -32,7 +32,7 @@ export class Form extends Component{
     render(){
         const {name,number} = this.state;
         return(
-            <Form onSubmit={this.formSubmit}>
+            <Forma onSubmit={this.formSubmit}>
                 <Label>Name
                     <Input
                     type="text"
@@ -50,16 +50,16 @@ export class Form extends Component{
                     type="tel"
                     name="phone"
                     id="input-phone"
+                    pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
                     required
                     onChange={this.formChange}
                     value={number}
-                    pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
                     />
                 </Label>
                 <BtnSubmit
                 type="submit"
                 >Add Contact</BtnSubmit>
-            </Form>
+            </Forma>
         )
     }
 }
