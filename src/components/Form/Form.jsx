@@ -48,7 +48,7 @@ export class Form extends Component{
                     Number
                     <Input
                     type="tel"
-                    name="phone"
+                    name="number"
                     id="input-phone"
                     pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
                     required

@@ -5,7 +5,7 @@ import {ContactLi,BtnDelete} from './Contact.styled'
 
 export class Contact extends Component{
     deleteContact = id => {
-        this.props.handleDelete(id);
+        this.props.onDeleteContact(id);
     };
 
 
@@ -18,7 +18,7 @@ render() {
             </p>
             <BtnDelete
             type="button"
-            onDeleteContact={()=>{
+            onClick={()=>{
                 this.deleteContact(id);
             }}
             >Delete</BtnDelete>
@@ -34,5 +34,5 @@ Contact.propTypes = {
     id: propTypes.string.isRequired,
     name:propTypes.string.isRequired,
     number:propTypes.string.isRequired,
-    handleDelete:propTypes.func.isRequired,
+    onDeleteContact:propTypes.func.isRequired,
 }

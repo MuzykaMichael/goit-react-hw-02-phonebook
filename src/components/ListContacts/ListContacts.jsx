@@ -15,7 +15,7 @@ export class ListContacts extends Component{
                         id={id}
                         name={name}
                         number={number}
-                        onDeleteContact={this.props.onDeleteContact}
+                        onDeleteContact={this.props.handleDelete}
                         />
                     );
                 })}
@@ -33,5 +33,5 @@ ListContacts.propTypes = {
             id: propTypes.string.isRequired,
         }).isRequired,
     ).isRequired,
-    onDeleteContact: propTypes.func.isRequired,
+    handleDelete: propTypes.func.isRequired,
 }
